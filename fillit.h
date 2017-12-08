@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 19:11:53 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/12/07 11:31:03 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/12/08 09:53:06 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define FILLIT_H
 
 # include "libft/libft.h"
+
+# define BUFF_SIZE 21
 
 typedef struct			s_tetri
 {
@@ -25,13 +27,19 @@ typedef struct			s_tetri
 typedef struct			s_cursor
 {
 	int					size;
-	int					position;
+	int					pos;
 	int					check;
 	int					form;
 }						t_cursor;
 
 unsigned int			ft_atobin(char *str);
-int						ft_backtracking(char *result, t_cursor cursor, t_list *lst, int j);
-//int						ft_backtracking(char *result, t_cursor cursor, t_list *lst);
+int						ft_isfilled(char *result, t_tetri *tetri, t_cursor cursor);
+void					ft_fillit(char *result, t_tetri *tetri, t_cursor cursor);
+unsigned int			*ft_init_tab(void);
+char					*ft_makesquare(unsigned int size);
+t_list					*ft_filetolist(char *file);
+int						ft_backtrack(char *result, t_cursor cursor, t_list *lst, int j);
+t_tetri					*ft_newtetri(int id, char *value_t);
+t_cursor				*ft_newcursor(int len);
 
 #endif
