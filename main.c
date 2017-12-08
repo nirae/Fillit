@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 19:00:57 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/12/08 09:53:17 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/12/08 16:55:35 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,5 +70,7 @@ int		main(int ac, char **av)
 		ft_putstr(result);
 		ft_putchar('\n');
 	}
+	else
+		ft_print_usage();
 	return (0);
 }
