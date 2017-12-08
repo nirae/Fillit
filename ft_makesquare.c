@@ -1,31 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atobin.c                                        :+:      :+:    :+:   */
+/*   ft_makesquare.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/29 19:16:47 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/12/08 09:43:08 by ndubouil         ###   ########.fr       */
+/*   Created: 2017/12/08 09:28:55 by ndubouil          #+#    #+#             */
+/*   Updated: 2017/12/08 09:44:58 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_atobin(char *str)
-{
-	int				j;
-	int				n;
-	unsigned int	a;
+#include "fillit.h"
 
+/*
+** Params : size of the square
+** Return : string contain the empty result square ready for fillit
+*/
+char	*ft_makesquare(unsigned int size)
+{
+	char	*result;
+	unsigned int		i;
+	unsigned int		j;
+	unsigned int		count;
+
+	if (!(result = ft_strnew((size * size) + size )))
+		return (NULL);
+	i = 0;
 	j = 0;
-	a = 0;
-	n = 0;
-	while (str[j] != 0)
+	while (j < size)
 	{
-		if (str[j] == '\n')
-			n++;
-		if (str[j] == '#')
-			a = a | (1 << (j - n));
+		count = 0;
+		while (count++ < size)
+			result[i++] = '.';
+		result[i++] = '\n';
 		j++;
 	}
-	return (a);
+	return (result);
 }
