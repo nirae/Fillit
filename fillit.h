@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 19:11:53 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/12/08 09:53:06 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/12/08 13:28:37 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,8 @@ t_list					*ft_filetolist(char *file);
 int						ft_backtrack(char *result, t_cursor cursor, t_list *lst, int j);
 t_tetri					*ft_newtetri(int id, char *value_t);
 t_cursor				*ft_newcursor(int len);
+void					ft_print_usage(void);
+void					ft_print_error(void);
+void					ft_print_error_toolong(int len);
 
 #endif

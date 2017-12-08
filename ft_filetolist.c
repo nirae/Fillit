@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 09:22:14 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/12/08 09:55:05 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/12/08 13:56:37 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ t_list					*ft_filetolist(char *file)
 	lst = NULL;
 	i = 0;
 	if ((fd = open(file, O_RDONLY)) < 0)
-		return (NULL);
+		ft_print_error();
 	while ((n_lus = read(fd, temp, BUFF_SIZE)) > 0)
 	{
 		temp[n_lus] = '\0';
@@ -40,6 +40,8 @@ t_list					*ft_filetolist(char *file)
 			ft_lstaddend(&lst, ft_lstnew(ft_newtetri(i, temp), sizeof(t_tetri)));
 		i++;
 	}
+	if (i > 26)
+		ft_print_error();
 	close(fd);
 	return (lst);
 }
