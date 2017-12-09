@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 09:22:14 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/12/09 11:58:59 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/12/09 14:27:26 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ t_list			*ft_filetolist(char *file)
 	{
 		ft_tempisnl(tp[0]);
 		tp[n_lus] = '\0';
+		ft_istetri(tp);
 		if (i == 0)
 			lst = ft_lstnew(ft_newtetri(i, tp), sizeof(t_tetri));
 		else
