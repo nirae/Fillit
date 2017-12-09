@@ -6,13 +6,13 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/06 19:56:11 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/12/08 09:42:46 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/12/09 14:16:53 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
-
 /*
+
 ** Params : result string, struct of cursor
 ** Return : number of empty squares that can't be used on one line
 */
