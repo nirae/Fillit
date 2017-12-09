@@ -6,7 +6,7 @@
 /*   By: ndelest <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/09 11:41:37 by ndelest           #+#    #+#             */
-/*   Updated: 2017/12/09 14:12:54 by ndelest          ###   ########.fr       */
+/*   Updated: 2017/12/09 14:36:45 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static int		ft_wrongdiagonal(char *tetri, int i)
 	return (0);
 }
 
-/*static int		ft_isnotalone(char *tetri, int i)
+static int		ft_isnotalone(char *tetri, int i)
 {
 	if (i != 0 && tetri[i - 1] == '#')
 		return (1);
@@ -36,7 +36,7 @@ static int		ft_wrongdiagonal(char *tetri, int i)
 	if (i < 18 && tetri[i + 1] == '#')
 		return (1);
 	return (0);
-}*/
+}
 
 void			ft_istetri(char *tetri)
 {
@@ -47,9 +47,9 @@ void			ft_istetri(char *tetri)
 	{
 		if (tetri[i] == '#')
 		{
-//			if (!ft_isnotalone(tetri, i))
-//				ft_print_error();
-			if (i > 5 && i < 18 && (tetri[i - 6] == '#' || tetri[i - 4] == '#' 
+			if (!ft_isnotalone(tetri, i))
+				ft_print_error();
+			if (i > 5 && i < 18 && (tetri[i - 6] == '#' || tetri[i - 4] == '#'
 						|| tetri[i + 4] == '#' || tetri[i + 6] == '#'))
 			{
 				if (!ft_wrongdiagonal(tetri, i))
