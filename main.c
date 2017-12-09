@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 19:00:57 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/12/08 16:55:35 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/12/09 11:26:07 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,15 +46,15 @@ int		main(int ac, char **av)
 		/*
 		** Print the list
 		*/
-		ft_lstiter(lst, f);
+		//ft_lstiter(lst, f);
 		cursor = ft_newcursor(ft_lstlen(lst));
 		result = ft_makesquare(cursor->size);
 		/*
 		** Print the square before the backtracking
 		*/
-		ft_putstr("Grille avant remplissage :\n");
-		ft_putstr(result);
-		ft_putchar('\n');
+		//ft_putstr("Grille avant remplissage :\n");
+		//ft_putstr(result);
+		//ft_putchar('\n');
 		/*
 		** Backtracking
 		*/
@@ -66,7 +66,7 @@ int		main(int ac, char **av)
 		/*
 		** Print the final square
 		*/
-		ft_putstr("Grille apres le remplissage :\n");
+		//ft_putstr("Grille apres le remplissage :\n");
 		ft_putstr(result);
 		ft_putchar('\n');
 	}

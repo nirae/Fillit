@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 19:11:53 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/12/08 13:28:37 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/12/09 09:42:26 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include "libft/libft.h"
 
-# define BUFF_SIZE 21
+# define BUFF_SIZE 20
 
 typedef struct			s_tetri
 {
