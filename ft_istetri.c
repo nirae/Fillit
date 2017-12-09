@@ -6,7 +6,7 @@
 /*   By: ndelest <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/09 11:41:37 by ndelest           #+#    #+#             */
-/*   Updated: 2017/12/09 14:36:45 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/12/09 16:46:20 by ndelest          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static int		ft_isnotalone(char *tetri, int i)
 {
 	if (i != 0 && tetri[i - 1] == '#')
 		return (1);
-	if (i > 5 && tetri[i - 5] == '#')
+	if (i > 4 && tetri[i - 5] == '#')
 		return (1);
 	if (i < 15 && tetri[i + 5] == '#')
 		return (1);

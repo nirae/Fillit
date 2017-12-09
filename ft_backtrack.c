@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/06 19:56:11 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/12/09 15:44:53 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/12/09 16:34:40 by ndelest          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static int		ft_emptyline(char *result, t_cursor cursor)
 ** Params : result string, struct of cursor
 ** Return : number of empty squares that can't be used on one column
 */
-static int		ft_emptycol(char *result, t_cursor cursor)
+/*static int		ft_emptycol(char *result, t_cursor cursor)
 {
 	int		i;
 	int		k;
@@ -67,7 +67,7 @@ static int		ft_emptycol(char *result, t_cursor cursor)
 		++i;
 	}
 	return (isempty);
-}
+}*/
 
 /*
 ** Params : result string, struct of cursor, counter
@@ -95,7 +95,7 @@ int				ft_backtrack(char *result, t_cursor cursor, t_list *lst, int j)
 {
 	if (lst == NULL)
 		return (1);
-	if (ft_emptyline(result, cursor) + ft_emptycol(result, cursor)
+	if (ft_emptyline(result, cursor) /*+ ft_emptycol(result, cursor)*/
 			> (cursor.size * cursor.size) - (cursor.form * 4))
 		return (0);
 	while (!(ft_isfilled(result, ((t_tetri *)(lst->content)), cursor))
