@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 19:16:47 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/12/09 12:00:00 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/12/09 13:10:04 by ndelest          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,6 @@ unsigned int	ft_atobin(char *str)
 		j++;
 	}
 	ft_istetrivalid(nbblocks, n, j - n);
+	ft_istetri(str);
 	return (a);
 }

@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 19:11:53 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/12/09 12:03:14 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/12/09 13:08:08 by ndelest          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,5 @@ t_cursor				*ft_newcursor(int len);
 void					ft_print_usage(void);
 void					ft_print_error(void);
 void					ft_print_error_toolong(int len);
-
+void					ft_istetri(char *tetri);
 #endif
