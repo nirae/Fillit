@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 09:50:10 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/12/08 15:15:59 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/12/09 09:05:40 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static unsigned int		ft_check_tetri(unsigned int bin_value)
 	i = 0;
 	reftab = NULL;
 	reftab = ft_init_tab();
-	if (bin_value == 0 || bin_value > 4369)
+	if (bin_value < 15)
 		ft_print_error();
 	while (i < 19)
 	{
@@ -33,6 +33,7 @@ static unsigned int		ft_check_tetri(unsigned int bin_value)
 			return (reftab[i]);
 		i++;
 	}
+	ft_print_error();
 	return (0);
 }
 
