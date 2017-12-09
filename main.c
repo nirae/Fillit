@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 19:00:57 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/12/09 11:26:07 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/12/09 16:18:50 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,6 @@ int		main(int ac, char **av)
 		*/
 		//ft_putstr("Grille apres le remplissage :\n");
 		ft_putstr(result);
-		ft_putchar('\n');
 	}
 	else
 		ft_print_usage();
