@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 09:28:55 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/12/08 09:44:58 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/12/09 11:50:49 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@
 */
 char	*ft_makesquare(unsigned int size)
 {
-	char	*result;
-	unsigned int		i;
-	unsigned int		j;
-	unsigned int		count;
+	char			*result;
+	unsigned int	i;
+	unsigned int	j;
+	unsigned int	count;
 
-	if (!(result = ft_strnew((size * size) + size )))
+	if (!(result = ft_strnew((size * size) + size)))
 		return (NULL);
 	i = 0;
 	j = 0;

@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 19:16:47 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/12/09 11:24:14 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/12/09 12:00:00 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ unsigned int	ft_atobin(char *str)
 		if (str[j] == '\n')
 			n++;
 		if (str[j] == '#')
-		{	
+		{
 			a = a | (1 << (j - n));
 			nbblocks++;
 		}
