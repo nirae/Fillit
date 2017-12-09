@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/06 19:56:11 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/12/09 14:16:53 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/12/09 15:44:53 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ static int		ft_emptyline(char *result, t_cursor cursor)
 	while (i < cursor.check && i / j < cursor.size - 1)
 	{
 		emptysize = 0;
-		while (result[i++] == '.' && emptysize < 4 &&
-				result[i - j] != '.' && result[i + j] != '.')
+		while (result[i] == '.' && emptysize < 4 &&
+				result[i - j] != '.' && result[i++ + j] != '.')
 			++emptysize;
 		if (emptysize < 4)
 			isempty = isempty + emptysize;
