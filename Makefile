@@ -6,7 +6,7 @@
 #    By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 09:16:22 by ndubouil          #+#    #+#              #
-#    Updated: 2017/12/08 10:21:38 by ndubouil         ###   ########.fr        #
+#    Updated: 2017/12/09 13:08:33 by ndelest          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,7 @@ SRC =	ft_atobin.c		\
 		ft_newcursor.c	\
 		ft_newtetri.c	\
 		errors.c		\
+		ft_istetri.c	\
 
 
 OBJ = $(SRC:.c=.o)
