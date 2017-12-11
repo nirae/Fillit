@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 19:00:57 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/12/09 16:18:50 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/12/11 16:22:10 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,9 @@ int		main(int ac, char **av)
 			cursor->size = cursor->size + 1;
 			result = ft_makesquare(cursor->size);
 		}
+		//ft_freelist(&lst);
+		//free(lst);
+		//ft_lstiter(lst, f);
 		/*
 		** Print the final square
 		*/

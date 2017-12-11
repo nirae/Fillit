@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 19:11:53 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/12/11 09:00:43 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/12/11 11:03:56 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,4 +48,5 @@ void					ft_print_usage(void);
 void					ft_print_error(void);
 void					ft_print_error_toolong(int len);
 void					ft_istetri(char *tetri);
+void					ft_freelist(t_list **lst);
 #endif

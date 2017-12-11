@@ -6,7 +6,7 @@
 #    By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 09:16:22 by ndubouil          #+#    #+#              #
-#    Updated: 2017/12/11 10:16:35 by ndubouil         ###   ########.fr        #
+#    Updated: 2017/12/11 11:27:01 by ndubouil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,8 @@ SRC		=	ft_atobin.c		\
 			ft_newcursor.c	\
 			ft_newtetri.c	\
 			errors.c		\
-			ft_istetri.c
+			ft_istetri.c	\
+			ft_freelist.c
 OBJ		=	$(patsubst %.c,%.o,$(SRC))
 # Name
 NAME	=	fillit
@@ -39,14 +40,14 @@ NAME	=	fillit
 
 all: $(NAME)
 
-$(NAME):	$(OBJ) $(LOBJ)
+$(NAME):	$(OBJ)
 		@echo "Recompiling libft ..."
 		@make re -C $(LIB)
 		@echo "Building $(NAME) ..."
 		@$(CC) $(CFLAGS) $(MAIN) $(OBJ) -I$(HEADER) -I$(LIB) -L$(LIB) -lft -o $(NAME)
 		@echo "OK"
 
-%.o: 		%.c $(HFILES) Makefile
+%.o: 		%.c $(MAIN) $(HFILES) Makefile
 		@echo "Creating $@ ..."
 		@$(CC) $(CFLAGS) -c $< -o $@
 
