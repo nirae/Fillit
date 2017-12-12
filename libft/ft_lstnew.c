@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/23 08:37:56 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/23 10:52:43 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/12/12 10:18:56 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	}
 	else
 	{
-		if (!(result->content = malloc(sizeof(*content) * content_size)))
+		if (!(result->content = ft_memalloc(content_size)))
 		{
 			free(result);
 			return (0);

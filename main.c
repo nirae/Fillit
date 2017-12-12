@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 19:00:57 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/12/11 16:22:10 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/12/12 14:24:17 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,16 @@ int		main(int ac, char **av)
 		** Print the list
 		*/
 		//ft_lstiter(lst, f);
-		cursor = ft_newcursor(ft_lstlen(lst));
-		result = ft_makesquare(cursor->size);
+		if (!(cursor = ft_newcursor(ft_lstlen(lst))))
+		{
+			ft_freelist(&lst);
+			ft_print_error();
+		}
+		if (!(result = ft_makesquare(cursor->size)))
+		{
+			ft_freelist(&lst);
+			ft_print_error();
+		}
 		/*
 		** Print the square before the backtracking
 		*/
@@ -61,16 +69,20 @@ int		main(int ac, char **av)
 		while (!(ft_backtrack(result, *cursor, lst, 0)))
 		{
 			cursor->size = cursor->size + 1;
-			result = ft_makesquare(cursor->size);
+			if (!(result = ft_makesquare(cursor->size)))
+			{
+				ft_freelist(&lst);
+				ft_print_error();
+			}
 		}
-		//ft_freelist(&lst);
-		//free(lst);
-		//ft_lstiter(lst, f);
+		free(cursor);
+		ft_freelist(&lst);
 		/*
 		** Print the final square
 		*/
 		//ft_putstr("Grille apres le remplissage :\n");
 		ft_putstr(result);
+		free(result);
 	}
 	else
 		ft_print_usage();

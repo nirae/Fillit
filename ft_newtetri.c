@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 09:50:10 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/12/09 11:49:36 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/12/12 10:46:10 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,14 @@ static unsigned int		ft_check_tetri(unsigned int bin_value)
 	while (i < 19)
 	{
 		if (bin_value % reftab[i] == 0)
-			return (reftab[i]);
+		{
+			bin_value = reftab[i];
+			free(reftab);
+			return (bin_value);
+		}
 		i++;
 	}
+	free(reftab);
 	ft_print_error();
 	return (0);
 }
@@ -52,6 +57,9 @@ t_tetri					*ft_newtetri(int id, char *value_t)
 	result->value = id + 'A';
 	result->bin_value = ft_check_tetri(ft_atobin(value_t));
 	if (result->bin_value == 0)
+	{
+		free(result);
 		return (NULL);
+	}
 	return (result);
 }
