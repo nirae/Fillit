@@ -6,16 +6,12 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 09:28:55 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/12/13 18:54:59 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/12/13 19:36:12 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-/*
-** Params : size of the square
-** Return : string contain the empty result square ready for fillit
-*/
 char	*ft_makesquare(t_cursor *cursor, t_list **lst)
 {
 	char			*result;

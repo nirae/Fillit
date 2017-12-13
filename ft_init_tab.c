@@ -6,16 +6,12 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 09:24:50 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/12/09 11:54:15 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/12/13 19:34:31 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-/*
-** Params : nothing
-** Return : tab of all the valid tetriminos
-*/
 unsigned int	*ft_init_tab(void)
 {
 	unsigned int	*tab;

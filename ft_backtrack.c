@@ -1,21 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   backtracking.c                                     :+:      :+:    :+:   */
+/*   ft_backtrack.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/06 19:56:11 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/12/09 16:34:40 by ndelest          ###   ########.fr       */
+/*   Updated: 2017/12/13 19:33:07 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
-/*
 
-** Params : result string, struct of cursor
-** Return : number of empty squares that can't be used on one line
-*/
 static int		ft_emptyline(char *result, t_cursor cursor)
 {
 	int		i;
@@ -39,41 +35,6 @@ static int		ft_emptyline(char *result, t_cursor cursor)
 	return (isempty);
 }
 
-/*
-** Params : result string, struct of cursor
-** Return : number of empty squares that can't be used on one column
-*/
-/*static int		ft_emptycol(char *result, t_cursor cursor)
-{
-	int		i;
-	int		k;
-	int		emptysize;
-	int		isempty;
-
-	i = 1;
-	isempty = 0;
-	while (i < cursor.check && i <= cursor.size)
-	{
-		k = i;
-		emptysize = 0;
-		while (result[k] == '.' && emptysize < 4 && result[k - 1] != '.'
-				&& result[k + 1] != '.')
-		{
-			++emptysize;
-			k = k + cursor.size + 1;
-		}
-		if (emptysize < 4)
-			isempty = isempty + emptysize;
-		++i;
-	}
-	return (isempty);
-}*/
-
-/*
-** Params : result string, struct of cursor, counter
-** Return : nothing
-** Delete one tetriminos on the result square
-*/
 static void		ft_deleteit(char *result, t_cursor cursor, int j)
 {
 	cursor.pos = 0;
@@ -85,12 +46,6 @@ static void		ft_deleteit(char *result, t_cursor cursor, int j)
 	}
 }
 
-/*
-** Principal Function
-** Params : result string, struct of cursor, t_list of tetriminos, counter
-** Return : 1 or 0
-** Backtracking for resolve the square of tetriminos
-*/
 int				ft_backtrack(char *result, t_cursor cursor, t_list *lst, int j)
 {
 	if (lst == NULL)

@@ -6,17 +6,12 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 08:37:43 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/12/08 09:44:48 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/12/13 19:34:49 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-/*
-** Params : result string, struct of the tetriminos, struct of the cursor
-** Return : 1 or 0
-** Search if the tetriminos can be put here
-*/
 int		ft_isfilled(char *result, t_tetri *tetri, t_cursor cursor)
 {
 	int				i;

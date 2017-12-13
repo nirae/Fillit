@@ -1,22 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fillit.c                                           :+:      :+:    :+:   */
+/*   ft_fillit.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 08:33:02 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/12/08 09:44:36 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/12/13 19:33:51 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-/*
-** Params : result string, struct of the tetriminos, struct of the cursor
-** Return : nothing
-** Put the tetriminos on the result square
-*/
 void	ft_fillit(char *result, t_tetri *tetri, t_cursor cursor)
 {
 	int				k;

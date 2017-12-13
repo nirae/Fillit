@@ -6,16 +6,12 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 09:46:10 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/12/13 18:48:01 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/12/13 19:36:31 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-/*
-** Params : lenght
-** Return : struct of cursor
-*/
 t_cursor	*ft_newcursor(int len, t_list **lst)
 {
 	t_cursor	*result;

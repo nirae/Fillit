@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 09:22:14 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/12/13 18:32:36 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/12/13 19:33:33 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,12 +38,6 @@ static void		ft_tempisnl(char temp, t_list **lst)
 		ft_error(lst);
 }
 
-/*
-** Params : file of tetriminos
-** Return : t_list of a struct of tetriminos
-** Convert the file in a t_list of struct of tetriminos
-** Open -> Read while the file is not finish and put in t_list for all of tetriminos -> Close
-*/
 void			ft_filetolist(char *file, t_list **lst)
 {
 	int				i;
