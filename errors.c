@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 10:19:01 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/12/08 13:36:30 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/12/13 17:24:22 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,4 +21,10 @@ void	ft_print_error(void)
 {
 	ft_putstr("error\n");
 	exit(0);
+}
+
+void	ft_error(t_list **lst)
+{
+	ft_freelist(lst);
+	ft_print_error();
 }
