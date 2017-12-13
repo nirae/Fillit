@@ -6,7 +6,7 @@
 #    By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 09:16:22 by ndubouil          #+#    #+#              #
-#    Updated: 2017/12/12 12:36:00 by ndubouil         ###   ########.fr        #
+#    Updated: 2017/12/13 19:09:34 by ndubouil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,14 +40,14 @@ NAME	=	fillit
 
 all: $(NAME)
 
-$(NAME):	$(OBJ)
-		@echo "Recompiling libft ..."
-		@make re -C $(LIB)
+$(NAME):	$(OBJ) $(MAIN) $(HFILES) $(LIB) Makefile
+		@echo "Compiling libft ..."
+		@make -C $(LIB)
 		@echo "Building $(NAME) ..."
 		@$(CC) $(CFLAGS) $(MAIN) $(OBJ) -I$(HEADER) -I$(LIB) -L$(LIB) -lft -o $(NAME)
 		@echo "OK"
 
-%.o: 		%.c $(MAIN) $(HFILES) Makefile
+%.o: 		%.c
 		@echo "Creating $@ ..."
 		@$(CC) $(CFLAGS) -c $< -o $@
 

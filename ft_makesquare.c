@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 09:28:55 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/12/09 11:50:49 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/12/13 18:54:59 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,20 @@
 ** Params : size of the square
 ** Return : string contain the empty result square ready for fillit
 */
-char	*ft_makesquare(unsigned int size)
+char	*ft_makesquare(t_cursor *cursor, t_list **lst)
 {
 	char			*result;
 	unsigned int	i;
 	unsigned int	j;
 	unsigned int	count;
+	unsigned int	size;
 
+	size = cursor->size;
 	if (!(result = ft_strnew((size * size) + size)))
-		return (NULL);
+	{
+		free(cursor);
+		ft_error(lst);
+	}
 	i = 0;
 	j = 0;
 	while (j < size)
