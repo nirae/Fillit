@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 19:00:57 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/12/13 18:20:24 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/12/13 19:01:40 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ static	void	ft_displaylist(t_list *list)
 
 int		main(int ac, char **av)
 {
-	t_cursor		*cursor;
-	t_list	*lst;
-	char *result;
+	t_cursor	*cursor;
+	t_list		*lst;
+	char		*result;
 
 	/*
 	** For print the list
@@ -47,18 +47,12 @@ int		main(int ac, char **av)
 		** Print the list
 		*/
 		//ft_lstiter(lst, f);
-		if (!(cursor = ft_newcursor(ft_lstlen(lst))))
-			ft_error(&lst);
-		if (!(result = ft_makesquare(cursor->size)))
-			ft_error(&lst);
-				while (!(ft_backtrack(result, *cursor, lst, 0)))
+		cursor = ft_newcursor(ft_lstlen(lst), &lst);
+		result = ft_makesquare(cursor, &lst);
+		while (!(ft_backtrack(result, *cursor, lst, 0)))
 		{
 			cursor->size = cursor->size + 1;
-			if (!(result = ft_makesquare(cursor->size)))
-			{
-				free(cursor);
-				ft_error(&lst);
-			}
+			result = ft_makesquare(cursor, &lst);
 		}
 		free(cursor);
 		ft_freelist(&lst);

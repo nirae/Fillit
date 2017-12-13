@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 09:46:10 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/12/12 10:44:32 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/12/13 18:48:01 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@
 ** Params : lenght
 ** Return : struct of cursor
 */
-t_cursor	*ft_newcursor(int len)
+t_cursor	*ft_newcursor(int len, t_list **lst)
 {
 	t_cursor	*result;
 
 	if (!(result = ft_memalloc(sizeof(*result))))
-		return (NULL);
+		ft_error(lst);
 	result->form = len;
 	result->size = ft_sqrt(len * 4);
 	result->pos = 0;

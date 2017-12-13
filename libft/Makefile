@@ -6,7 +6,7 @@
 #    By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 09:16:22 by ndubouil          #+#    #+#              #
-#    Updated: 2017/12/11 11:26:18 by ndubouil         ###   ########.fr        #
+#    Updated: 2017/12/13 19:11:43 by ndubouil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -106,13 +106,14 @@ NAME	=	libft.a
 
 all: $(NAME)
 
-$(NAME):	$(OBJ)
+$(NAME):	$(OBJ) $(HFILES) Makefile
 			@echo "Building $(NAME) ..."
 			@$(AR) rc $(NAME) $(OBJ)
 			@$(RANLIB) $(NAME)
 			@echo "The library $(NAME) is ready"
 
-%.o:		%.c $(HFILES) Makefile
+%.o:		%.c
+			@echo "Creating $@ ..."
 			@$(CC) $(CFLAGS) -c $< -o $@ -I$(HEADER)
 
 clean:
