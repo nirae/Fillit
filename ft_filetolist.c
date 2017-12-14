@@ -6,14 +6,14 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 09:22:14 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/12/13 19:33:33 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/12/14 07:55:57 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 #include <fcntl.h>
 
-static t_list 	*ft_lnew(t_list **lst, int i, char *tp)
+static t_list	*ft_lnew(t_list **lst, int i, char *tp)
 {
 	t_list	*result;
 	t_tetri *tetri;

@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/06 19:56:11 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/12/13 19:33:07 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/12/14 07:55:05 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,8 @@ int				ft_backtrack(char *result, t_cursor cursor, t_list *lst, int j)
 {
 	if (lst == NULL)
 		return (1);
-	if (ft_emptyline(result, cursor) /*+ ft_emptycol(result, cursor)*/
-			> (cursor.size * cursor.size) - (cursor.form * 4))
+	if (ft_emptyline(result, cursor) > (cursor.size * cursor.size)
+			- (cursor.form * 4))
 		return (0);
 	while (!(ft_isfilled(result, ((t_tetri *)(lst->content)), cursor))
 			&& result[cursor.pos] != 0)

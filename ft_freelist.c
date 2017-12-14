@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/11 10:26:23 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/12/13 19:34:11 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/12/14 07:56:47 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ static void		ft_freetetri(void *elem, size_t size)
 void			ft_freelist(t_list **lst)
 {
 	void	(*del)(void *elem, size_t size);
+
 	del = &ft_freetetri;
 	ft_lstdel(lst, del);
 }
