@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 19:00:57 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/12/13 19:01:40 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/12/14 17:47:18 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,10 +54,10 @@ int		main(int ac, char **av)
 			cursor->size = cursor->size + 1;
 			result = ft_makesquare(cursor, &lst);
 		}
-		free(cursor);
+		ft_memdel((void **)&cursor);
 		ft_freelist(&lst);
 		ft_putstr(result);
-		free(result);
+		ft_strdel(&result);
 	}
 	else
 		ft_print_usage();

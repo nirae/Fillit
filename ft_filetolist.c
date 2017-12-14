@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 09:22:14 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/12/13 18:32:36 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/12/14 17:48:38 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static t_list 	*ft_lnew(t_list **lst, int i, char *tp)
 		ft_error(lst);
 	if (!(result = ft_lstnew(tetri, sizeof(*tetri))))
 		ft_error(lst);
-	free(tetri);
+	ft_memdel((void **)&tetri);
 	return (result);
 }
 
